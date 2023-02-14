@@ -9,8 +9,20 @@ I want to sharpen my CSS grid skills and discover the raster Swiss system. The S
 # Poster Directory
 These are all the posters available to explore in this repo. More will (hopefully) be added soon.
 
-![Josef_Müller-Brockmann_1957](Josef_Müller-Brockmann_1957.jpg)
+[Juni-Festwochen Zürich (1957) designed by Josef Müller-Brockmann](https://teotimepacreau.github.io/SwissInternationalStyleResponsive/)           |Next one
+:-------------------------:|:-------------------------:
+![Josef_Müller-Brockmann_1957_poster](Josef_Müller-Brockmann_1957.jpg)  | 
+
 
 # Acknowledgments
-Inspiration and knowledge provided by:
+Inspiration and knowledge provided by both CSS Grid and Swiss Graphic Design articles :
+- https://www.smashingmagazine.com/2007/04/designing-with-grid-based-approach/
+- https://www.smashingmagazine.com/2009/07/lessons-from-swiss-style-graphic-design/
+- https://pavellaptev.medium.com/learning-css-grid-with-the-swiss-2bd02e913fa
+- https://swissincss.com/
+- https://open.nytimes.com/css-grid-for-designers-f74a883b98f5
+- https://grids.obys.agency/
+- https://www.smashingmagazine.com/2022/10/typographic-hierarchies/
+- https://swissgrid.posterhouse.org/
+- https://www.designsystems.com/space-grids-and-layouts/
 
