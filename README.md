@@ -9,6 +9,8 @@ I want to sharpen my CSS grid skills and discover the raster Swiss system. The S
 # Poster Directory
 These are all the posters available to explore in this repo. More will (hopefully) be added soon.
 
+![Josef_Müller-Brockmann_1957](Josef_Müller-Brockmann_1957.jpg)
+
 # Acknowledgments
 Inspiration and knowledge provided by:
 
