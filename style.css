@@ -1,0 +1,191 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul, ol, li {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Standard-Bold", Helvetica, sans-serif;
+    background-color: var(--primarycolor);
+}    
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+    
+/* A element that don't have a class get default styles */
+a:not([class]) {
+      text-decoration-skip-ink: auto;
+}
+    
+/* Make images easier to work with */
+img,
+picture {
+      max-width: 100%; /* img should never overflow past the available space*/
+      display: block;
+      height: auto;/*preserve aspect ratio*/
+}
+
+/* More consistent, styleable hr*/
+hr {
+  border-width: 1px 0 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* More space above the underline */
+a {
+  text-underline-offset: 0.2ex;
+}
+/*
+
+/* ------------ DOCUMENT FLOW ---------*/
+:root{
+    --primarycolor: #F1ECE2;
+    --secondarycolor: #F6A91F;
+    --tailleparagraphe: clamp(0.75rem, 1rem + 0.3vw, 1.5rem);
+    --tailletitre: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+}
+
+@font-face {
+    font-family: "Standard-Bold";
+    src: url("standard-bold.woff2") format("woff2");
+}
+.sous-grille {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap : calc(0.1*var(--tailleparagraphe));
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.blochautgauche {
+    grid-column: 1 / 13;
+    grid-row: 1 / 7;
+    background-color: var(--secondarycolor);
+}
+
+.prénoms {
+    grid-column: 4 / 5;
+    grid-row: 3 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+}
+
+.noms {
+    grid-column: 6 / 13;
+    grid-row: 3 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: var(--tailletitre);
+}
+
+#barre2 {
+    grid-column: 13 / 19;
+    grid-row: 3 / 10;
+    background-color: var(--secondarycolor);
+}
+
+#barre3 {
+    grid-column: 19 / 22;
+    grid-row: 4 / 13;
+    background-color: var(--secondarycolor);
+}
+
+#barre4 {
+    grid-column: 22 / 24;
+    grid-row: 2 / 8;
+    background-color: var(--secondarycolor);
+}
+#barre5 {
+    grid-column: 24 / 24;
+    grid-row: 1 / 7;
+    background-color: var(--secondarycolor);
+}
+
+.details {
+    grid-column: 6 / 13;
+    grid-row: 7 / 13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: var(--tailleparagraphe) 0;
+}
+
+.nomduconcert {
+    grid-column: 1 / 5;
+    grid-row: 7 / 13;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    text-align: right;
+}
+
+.copyright {
+    position: absolute;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: calc(0.7*var(--tailleparagraphe));
+    color: #676767;
+    bottom: 0;
+    right: 0;
+    padding: calc(0.5*var(--tailleparagraphe));
+}
+
+@media (width < 750px) {
+    .sous-grille {
+        height: 100%;
+    }
+    .noms {
+        word-break: break-all;
+        margin-right: var(--tailleparagraphe);
+    }
+    .nomduconcert {
+        grid-column: 2 / 13;
+        grid-row: 7;
+        text-align: left;
+    }
+    .details {
+        grid-column: 2 / 13;
+        grid-row: 8 / 13;
+    }
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        left: 12rem;
+        right: unset;
+        bottom: unset;
+        transform: rotate(270deg);
+    }
+    .copyright > * {
+        flex-basis: 25rem;
+    }
+}
